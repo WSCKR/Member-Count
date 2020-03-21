@@ -31,3 +31,7 @@ client.on('guildMemberRemove', () => {
     .then(result => console.log(result))
     .catch(error => console.log(error));
 });
+
+client.on('error', async => {
+	console.log('<connection failed - retrying>')
+})
